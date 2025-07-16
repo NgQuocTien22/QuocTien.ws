@@ -18,7 +18,7 @@
 	"title": "Create VPC",
 	"tags": [],
 	"description": "",
-	"content": "Create VPC Lab VPC Go to VPC service management console Click Your VPC. Click Create VPC. At the Create VPC page. In the Name tag field, enter Lab VPC. In the IPv4 CIDR field, enter: 10.10.0.0/16. Click Create VPC. "
+	"content": "Create VPC Lab VPC Go to VPC service management console Click Your VPC. Click Create VPC. At the Create VPC page: In the Name tag field, enter Lab VPC. In the IPv4 CIDR field, enter: 10.10.0.0/16. Click Create VPC. "
 },
 {
 	"uri": "https://NgQuocTien22.github.io/QuocTien.ws/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/",

@@ -53,7 +53,7 @@
 	"title": "Tạo VPC ",
 	"tags": [],
 	"description": "",
-	"content": "Tạo VPC Lab VPC Truy cập giao diện quản trị dịch vụ VPC Click Your VPC. Click Create VPC. ![VPC]({{ \u0026ldquo;images/2.prerequisite/001-createvpc.png\u0026rdquo; | relURL }})\nTại trang Create VPC: Tại mục Name tag điền Lab VPC. Tại mục IPv4 CIDR điền: 10.10.0.0/16. Click Create VPC. ![VPC]({{ \u0026ldquo;images/2.prerequisite/002-createvpc.png\u0026rdquo; | relURL }})\n"
+	"content": "Tạo VPC Lab VPC Truy cập giao diện quản trị dịch vụ VPC Click Your VPC. Click Create VPC. Tại trang Create VPC. Tại mục Name tag điền Lab VPC. Tại mục IPv4 CIDR điền : 10.10.0.0/16. Click Create VPC. "
 },
 {
 	"uri": "https://NgQuocTien22.github.io/QuocTien.ws/vi/2-prerequiste/",
