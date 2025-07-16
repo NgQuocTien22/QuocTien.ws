@@ -12,21 +12,21 @@
     <title>Create Public instance :: AWS System Manager</title>
 
     
-    <link href="/QuocTien.ws/css/nucleus.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/fontawesome-all.min.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/hybrid.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/featherlight.min.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/perfect-scrollbar.min.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/auto-complete.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/atom-one-dark-reasonable.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/theme.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/hugo-theme.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/nucleus.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/fontawesome-all.min.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/hybrid.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/featherlight.min.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/perfect-scrollbar.min.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/auto-complete.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/atom-one-dark-reasonable.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/theme.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/hugo-theme.css?1752653888" rel="stylesheet">
     
-    <link href="/QuocTien.ws/css/theme-workshop.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/theme-workshop.css?1752653888" rel="stylesheet">
     
     
 
-    <script src="/QuocTien.ws/js/jquery-3.3.1.min.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/jquery-3.3.1.min.js?1752653888"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,8 +59,8 @@
 </div>
 
 
-<script type="text/javascript" src="/QuocTien.ws/js/lunr.min.js?1752653256"></script>
-<script type="text/javascript" src="/QuocTien.ws/js/auto-complete.js?1752653256"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/lunr.min.js?1752653888"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/auto-complete.js?1752653888"></script>
 
 <script type="text/javascript">
     
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/QuocTien.ws/js/search.js?1752653256"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/search.js?1752653888"></script>
 
     
   </div>
@@ -1026,15 +1026,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#create-ec2-public-instance-amazon-linux-2">Create EC2 Public Instance (Amazon Linux 2)</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1059,158 +1051,89 @@
 
 
 
-	<h3 id="create-ec2-public-instance-amazon-linux-2">Create EC2 Public Instance (Amazon Linux 2)</h3>
-<ol>
-<li>Go to <a href="https://console.aws.amazon.com/ec2/v2/home">EC2 service management console</a>
+	<ol>
+<li>Go to <a href="https://console.aws.amazon.com/ec2/v2/home">EC2 service management console</a></li>
+</ol>
 <ul>
 <li>Click <strong>Instances</strong>.</li>
 <li>Click <strong>Launch instances</strong>.</li>
 </ul>
-</li>
-</ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/027-createec2.png" alt="027 createec2.png">
-
+<p><img src="/images/2.prerequisite/027-createec2.png" alt="EC2"></p>
 <ol start="2">
-<li>On the <strong>Step 1: Choose an Amazon Machine Image (AMI)</strong> page:
-<ul>
-<li>Click <strong>Select</strong> for <strong>Amazon Linux 2 AMI</strong>.</li>
-</ul>
-</li>
+<li>On the <strong>Step 1: Choose an Amazon Machine Image (AMI)</strong> page.</li>
 </ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/028-createec2.png" alt="028 createec2.png">
-
-<ol start="3">
-<li>On the <strong>Step 2: Choose an Instance Type</strong> page:
 <ul>
-<li>Select instance type <strong>t2.micro</strong>.</li>
+<li>Click <strong>Select</strong> to select AMI <strong>Amazon Linux 2 AMI</strong>.</li>
+</ul>
+<p><img src="/images/2.prerequisite/028-createec2.png" alt="EC2"></p>
+<ol start="3">
+<li>On the <strong>Step 2: Choose an Instance Type</strong> page.</li>
+</ol>
+<ul>
+<li>Click on Instance type <strong>t2.micro</strong>.</li>
 <li>Click <strong>Next: Configure Instance Details</strong>.</li>
 </ul>
-</li>
-</ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/029-createec2.png" alt="029 createec2.png">
-
+<p><img src="/images/2.prerequisite/029-createec2.png" alt="EC2"></p>
 <ol start="4">
-<li>At the <strong>Step 3: Configure Instance Details</strong> page:
+<li>At <strong>Step 3: Configure Instance Details</strong> page</li>
+</ol>
 <ul>
-<li><strong>Network</strong>: Select <strong>Lab VPC</strong>.</li>
-<li><strong>Subnet</strong>: Select <strong>Lab Public Subnet</strong>.</li>
-<li><strong>Auto-assign Public IP</strong>: Select <strong>Use subnet setting (Enable)</strong>.</li>
+<li>In the <strong>Network</strong> section, select <strong>Lab VPC</strong>.</li>
+<li>In the <strong>Subnet</strong> section, select <strong>Lab Public Subnet</strong>.</li>
+<li>In the <strong>Auto-assign Public IP</strong> section, select <strong>Use subnet setting (Enable)</strong></li>
 <li>Click <strong>Next: Add Storage</strong>.</li>
 </ul>
-</li>
-</ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/030-createec2.png" alt="030 createec2.png">
-
+<p><img src="/images/2.prerequisite/030-createec2.png" alt="EC2"></p>
 <ol start="5">
-<li>
-<p>Click <strong>Next: Add Tags</strong>, then click <strong>Next: Configure Security Group</strong>.</p>
-</li>
-<li>
-<p>At <strong>Step 6: Configure Security Group</strong> page:</p>
+<li>Click <strong>Next: Add Tags</strong> to move to the next step.</li>
+</ol>
 <ul>
-<li>Choose <strong>Select an existing security group</strong>.</li>
-<li>Select <strong>SG Public Linux Instance</strong>.</li>
+<li>Click <strong>Next: Configure Security Group</strong> to move to the next step.</li>
+</ul>
+<ol start="6">
+<li>On page <strong>Step 6: Configure Security Group</strong>.</li>
+</ol>
+<ul>
+<li>Select <strong>Select an existing security group</strong>.</li>
+<li>Select security group <strong>SG Public Linux Instance</strong>.</li>
 <li>Click <strong>Review and Launch</strong>.</li>
 </ul>
-</li>
-</ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/031-createec2.png" alt="031 createec2.png">
-
+<p><img src="/images/2.prerequisite/031-createec2.png" alt="EC2"></p>
 <ol start="7">
 <li>
-<p>A warning dialog appears (about no SSH access). Click <strong>Continue</strong> to proceed.</p>
+<p>The warning dialog box appears because we do not configure the firewall to allow connections to port 22, Click <strong>Continue</strong> to continue.</p>
 </li>
 <li>
-<p>At <strong>Step 7: Review Instance Launch</strong> page:</p>
+<p>At page <strong>Step 7: Review Instance Launch</strong>.</p>
+</li>
+</ol>
 <ul>
 <li>Click <strong>Launch</strong>.</li>
 </ul>
-</li>
-<li>
-<p>In the <strong>Key Pair</strong> dialog:</p>
-<ul>
-<li>Select <strong>Create a new key pair</strong>.</li>
-<li><strong>Key pair name</strong>: Enter <strong>LabKeypair</strong>.</li>
-<li>Click <strong>Download Key Pair</strong> and save it to your computer.</li>
-<li>Click <strong>Launch Instances</strong>.</li>
-</ul>
-</li>
+<ol start="9">
+<li>In the <strong>Select an existing key pair or create a new key pair</strong> dialog box.</li>
 </ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/032-createec2.png" alt="032 createec2.png">
-
+<ul>
+<li>Click to select <strong>Create a new key pair</strong>.</li>
+<li>In the <strong>Key pair name</strong> field, enter <strong>LabKeypair</strong>.</li>
+<li>Click <strong>Download Key Pair</strong> and save it to your computer.</li>
+<li>Click <strong>Launch Instances</strong> to create EC2 server.</li>
+</ul>
+<p><img src="/images/2.prerequisite/032-createec2.png" alt="EC2"></p>
 <ol start="10">
 <li>
-<p>Click <strong>View Instances</strong> to return to the EC2 Instances list.</p>
+<p>Click <strong>View Instances</strong> to return to the list of EC2 instances.</p>
 </li>
 <li>
-<p>Click the pencil icon under the <strong>Name</strong> column:</p>
+<p>Click the edit icon under the <strong>Name</strong> column.</p>
 </li>
 </ol>
 <ul>
-<li>Enter <strong>Public Linux Instance</strong>.</li>
+<li>In the <strong>Edit Name</strong> dialog box, enter <strong>Public Linux Instance</strong>.</li>
 <li>Click <strong>Save</strong>.</li>
 </ul>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/033-createec2.png" alt="033 createec2.png">
-
-<hr>
-<p>✅ You’ve successfully launched an EC2 Linux instance in the public subnet!</p>
-<p>👉 Next, we will create an EC2 <strong>Windows instance</strong> in the <strong>private subnet</strong>.</p>
+<p><img src="/images/2.prerequisite/033-createec2.png" alt="EC2"></p>
+<p>Next, we will do the same to create an EC2 Instance Windows running in the Private subnet.</p>
 
 
 
@@ -1708,19 +1631,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/QuocTien.ws/js/clipboard.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/perfect-scrollbar.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/perfect-scrollbar.jquery.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/jquery.sticky.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/featherlight.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/highlight.pack.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/clipboard.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/perfect-scrollbar.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/perfect-scrollbar.jquery.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/jquery.sticky.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/featherlight.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/highlight.pack.js?1752653888"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/QuocTien.ws/js/modernizr.custom-3.6.0.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/learn.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/hugo-learn.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/modernizr.custom-3.6.0.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/learn.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/hugo-learn.js?1752653888"></script>
 
-    <link href="/QuocTien.ws/mermaid/mermaid.css?1752653256" rel="stylesheet" />
-    <script src="/QuocTien.ws/mermaid/mermaid.js?1752653256"></script>
+    <link href="/QuocTien.ws/mermaid/mermaid.css?1752653888" rel="stylesheet" />
+    <script src="/QuocTien.ws/mermaid/mermaid.js?1752653888"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

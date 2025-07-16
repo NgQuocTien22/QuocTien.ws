@@ -12,21 +12,21 @@
     <title>Create security groups :: AWS System Manager</title>
 
     
-    <link href="/QuocTien.ws/css/nucleus.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/fontawesome-all.min.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/hybrid.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/featherlight.min.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/perfect-scrollbar.min.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/auto-complete.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/atom-one-dark-reasonable.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/theme.css?1752653256" rel="stylesheet">
-    <link href="/QuocTien.ws/css/hugo-theme.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/nucleus.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/fontawesome-all.min.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/hybrid.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/featherlight.min.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/perfect-scrollbar.min.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/auto-complete.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/atom-one-dark-reasonable.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/theme.css?1752653888" rel="stylesheet">
+    <link href="/QuocTien.ws/css/hugo-theme.css?1752653888" rel="stylesheet">
     
-    <link href="/QuocTien.ws/css/theme-workshop.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/theme-workshop.css?1752653888" rel="stylesheet">
     
     
 
-    <script src="/QuocTien.ws/js/jquery-3.3.1.min.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/jquery-3.3.1.min.js?1752653888"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,8 +59,8 @@
 </div>
 
 
-<script type="text/javascript" src="/QuocTien.ws/js/lunr.min.js?1752653256"></script>
-<script type="text/javascript" src="/QuocTien.ws/js/auto-complete.js?1752653256"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/lunr.min.js?1752653888"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/auto-complete.js?1752653888"></script>
 
 <script type="text/javascript">
     
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/QuocTien.ws/js/search.js?1752653256"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/search.js?1752653888"></script>
 
     
   </div>
@@ -1031,9 +1031,6 @@
     <li>
       <ul>
         <li></li>
-        <li><a href="#create-security-group-for-linux-instance-located-in-public-subnet">Create security group for Linux instance located in public subnet</a></li>
-        <li><a href="#create-security-group-for-windows-instance-located-in-private-subnet">Create security group for Windows instance located in private subnet</a></li>
-        <li><a href="#create-security-group-for-vpc-endpoint">Create security group for VPC Endpoint</a></li>
       </ul>
     </li>
   </ul>
@@ -1064,179 +1061,90 @@
 
 	<h4 id="create-security-groups">Create security groups</h4>
 <p>In this step, we will proceed to create the security groups used for our instances. As you can see, these security groups will not need to open traditional ports to <strong>ssh</strong> like port <strong>22</strong> or <strong>remote desktop</strong> through port <strong>3389</strong>.</p>
-<hr>
-<h3 id="create-security-group-for-linux-instance-located-in-public-subnet">Create security group for Linux instance located in public subnet</h3>
+<h4 id="create-security-group-for-linux-instance-located-in-public-subnet">Create security group for Linux instance located in public subnet</h4>
 <ol>
-<li>Go to <a href="https://console.aws.amazon.com/vpc">VPC service management console</a>
+<li>Go to <a href="https://console.aws.amazon.com/vpc">VPC service management console</a></li>
+</ol>
 <ul>
 <li>Click <strong>Security Group</strong>.</li>
 <li>Click <strong>Create security group</strong>.</li>
 </ul>
-</li>
+<p><img src="/images/2.prerequisite/019-createsg.png" alt="SG"></p>
+<ol start="3">
+<li>In the <strong>Security group name</strong> field, enter <strong>SG Public Linux Instance</strong>.</li>
 </ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/019-createsg.png" alt="019 createsg.png">
-
-<ol start="2">
-<li>In the <strong>Security group name</strong> field, enter <strong>SG Public Linux Instance</strong>.
 <ul>
 <li>In the <strong>Description</strong> section, enter <strong>SG Public Linux Instance</strong>.</li>
 <li>In the <strong>VPC</strong> section, click the <strong>X</strong> to reselect the <strong>Lab VPC</strong> you created for this lab.</li>
 </ul>
-</li>
+<p><img src="/images/2.prerequisite/020-createsg.png" alt="SG"></p>
+<ol start="4">
+<li>Keep <strong>Outbound rule</strong>, drag the mouse to the bottom.</li>
 </ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/020-createsg.png" alt="020 createsg.png">
-
-<ol start="3">
-<li>Keep <strong>Outbound rule</strong>, drag the mouse to the bottom.
 <ul>
 <li>Click <strong>Create security group</strong>.</li>
 </ul>
-</li>
-</ol>
 
-<div class="notices tip" ><p>The security group for Linux public instances does not need to open port <strong>22</strong> for SSH.</p>
+<div class="notices tip" ><p>As you can see, the security group we created to use for Linux public instances will not need to open traditional ports to <strong>ssh</strong> like port <strong>22</strong>.</p>
 </div>
 
-<hr>
-<h3 id="create-security-group-for-windows-instance-located-in-private-subnet">Create security group for Windows instance located in private subnet</h3>
+<h4 id="create-a-security-group-for-a-windows-instance-located-in-a-private-subnet">Create a security group for a Windows instance located in a private subnet</h4>
 <ol>
-<li>After successfully creating the security group for the Linux instance, return to the <strong>Security Groups</strong> list.</li>
+<li>After successfully creating a security group for the Linux instance located in the public subnet, click the Security Groups link to return to the Security groups list.</li>
 </ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/021-createsg.png" alt="021 createsg.png">
-
+<p><img src="/images/2.prerequisite/021-createsg.png" alt="SG"></p>
 <ol start="2">
 <li>
 <p>Click <strong>Create security group</strong>.</p>
 </li>
 <li>
 <p>In the <strong>Security group name</strong> field, enter <strong>SG Private Windows Instance</strong>.</p>
+</li>
+</ol>
 <ul>
 <li>In the <strong>Description</strong> section, enter <strong>SG Private Windows Instance</strong>.</li>
-<li>In the <strong>VPC</strong> section, click the <strong>X</strong> to reselect the <strong>Lab VPC</strong>.</li>
+<li>In the <strong>VPC</strong> section, click the <strong>X</strong> to reselect the <strong>Lab VPC</strong> you created for this lab.</li>
 </ul>
-</li>
-</ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/022-createsg.png" alt="022 createsg.png">
-
+<p><img src="/images/2.prerequisite/022-createsg.png" alt="SG"></p>
 <ol start="4">
-<li>Scroll down.
+<li>Scroll down.</li>
+</ol>
 <ul>
-<li>Add <strong>Outbound rule</strong>: allow <strong>TCP 443</strong> connection to <strong>10.10.0.0/16</strong>.</li>
+<li>Add <strong>Outbound rule</strong> to allow TCP 443 connection to 10.10.0.0/16 ( CIDR of <strong>Lab VPC</strong> we created)</li>
 <li>Click <strong>Create security group</strong>.</li>
 </ul>
-</li>
-</ol>
+<p><img src="/images/2.prerequisite/023-createsg.png" alt="SG"></p>
 
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/023-createsg.png" alt="023 createsg.png">
-
-
-<div class="notices tip" ><p>For private instances, we use <strong>Session Manager</strong> over <strong>TLS (port 443)</strong>, so outbound access to the <strong>VPC CIDR</strong> via <strong>TCP 443</strong> is required.</p>
+<div class="notices tip" ><p>For the Instance in the private subnet, we will connect to the <strong>Session Manager</strong> endpoint over a TLS encrypted connection, so we need to allow outbound connection from our instance to VPC CIDR through port 443.</p>
 </div>
 
-<hr>
-<h3 id="create-security-group-for-vpc-endpoint">Create security group for VPC Endpoint</h3>
+<h4 id="create-security-group-for-vpc-endpoint">Create security group for VPC Endpoint</h4>
 <ol>
-<li>
-<p>Now, create a security group for the VPC Endpoint used by <strong>Session Manager</strong>.</p>
-</li>
-<li>
-<p>Return to the <strong>Security Groups</strong> list.</p>
-</li>
-<li>
-<p>Click <strong>Create security group</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Security group name</strong> field, enter <strong>SG VPC Endpoint</strong>.</p>
+<li>In this step, we will create security group for VPC Endpoint of <strong>Session Manager</strong>.</li>
+<li>After successfully creating the security group for the Windows instance in the private subnet, click the Security Groups link to return to the Security groups list.</li>
+<li>Click <strong>Create security group</strong>.</li>
+<li>In the <strong>Security group name</strong> field, enter <strong>SG VPC Endpoint</strong>.</li>
+</ol>
 <ul>
 <li>In the <strong>Description</strong> section, enter <strong>SG VPC Endpoint</strong>.</li>
-<li>In the <strong>VPC</strong> section, click the <strong>X</strong> to reselect the <strong>Lab VPC</strong>.</li>
+<li>In the <strong>VPC</strong> section, click the <strong>X</strong> to reselect the <strong>Lab VPC</strong> you created for this lab.</li>
 </ul>
-</li>
-</ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/024-createsg.png" alt="024 createsg.png">
-
+<p><img src="/images/2.prerequisite/024-createsg.png" alt="SG"></p>
 <ol start="5">
-<li>Scroll down and delete the <strong>Outbound rule</strong>.</li>
+<li>Scroll down.</li>
 </ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/025-createsg.png" alt="025 createsg.png">
-
-<ol start="6">
-<li>Add an <strong>Inbound rule</strong>:
 <ul>
-<li>Protocol: <strong>TCP</strong></li>
-<li>Port: <strong>443</strong></li>
-<li>Source: <strong>10.10.0.0/16</strong></li>
+<li>Delete <strong>Outbound rule</strong>.</li>
+</ul>
+<p><img src="/images/2.prerequisite/025-createsg.png" alt="SG"></p>
+<ol start="6">
+<li>Add <strong>Inbound rule</strong> allowing TCP 443 to come from 10.10.0.0/16 ( CIDR of <strong>Lab VPC</strong> we created ).</li>
+</ol>
+<ul>
 <li>Click <strong>Create security group</strong>.</li>
 </ul>
-</li>
-</ol>
-
-
-
-  
-  
-    
-  
-
-<img src="images/2.prerequisite/026-createsg.png" alt="026 createsg.png">
-
-<hr>
-<p>✅ <strong>Done!</strong> You&rsquo;ve created all necessary security groups for your EC2 instances and VPC Endpoints.</p>
+<p><img src="/images/2.prerequisite/026-createsg.png" alt="SG"></p>
+<p>So we are done creating the necessary security groups for EC2 instances and VPC Endpoints.</p>
 
 
 
@@ -1734,19 +1642,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/QuocTien.ws/js/clipboard.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/perfect-scrollbar.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/perfect-scrollbar.jquery.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/jquery.sticky.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/featherlight.min.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/highlight.pack.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/clipboard.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/perfect-scrollbar.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/perfect-scrollbar.jquery.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/jquery.sticky.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/featherlight.min.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/highlight.pack.js?1752653888"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/QuocTien.ws/js/modernizr.custom-3.6.0.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/learn.js?1752653256"></script>
-    <script src="/QuocTien.ws/js/hugo-learn.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/modernizr.custom-3.6.0.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/learn.js?1752653888"></script>
+    <script src="/QuocTien.ws/js/hugo-learn.js?1752653888"></script>
 
-    <link href="/QuocTien.ws/mermaid/mermaid.css?1752653256" rel="stylesheet" />
-    <script src="/QuocTien.ws/mermaid/mermaid.js?1752653256"></script>
+    <link href="/QuocTien.ws/mermaid/mermaid.css?1752653888" rel="stylesheet" />
+    <script src="/QuocTien.ws/mermaid/mermaid.js?1752653888"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
