@@ -12,21 +12,21 @@
     <title>Preparing VPC and EC2 :: AWS System Manager</title>
 
     
-    <link href="/QuocTien.ws/css/nucleus.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/fontawesome-all.min.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/hybrid.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/featherlight.min.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/perfect-scrollbar.min.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/auto-complete.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/atom-one-dark-reasonable.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/theme.css?1752652713" rel="stylesheet">
-    <link href="/QuocTien.ws/css/hugo-theme.css?1752652713" rel="stylesheet">
+    <link href="/QuocTien.ws/css/nucleus.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/fontawesome-all.min.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/hybrid.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/featherlight.min.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/perfect-scrollbar.min.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/auto-complete.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/atom-one-dark-reasonable.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/theme.css?1752653256" rel="stylesheet">
+    <link href="/QuocTien.ws/css/hugo-theme.css?1752653256" rel="stylesheet">
     
-    <link href="/QuocTien.ws/css/theme-workshop.css?1752652713" rel="stylesheet">
+    <link href="/QuocTien.ws/css/theme-workshop.css?1752653256" rel="stylesheet">
     
     
 
-    <script src="/QuocTien.ws/js/jquery-3.3.1.min.js?1752652713"></script>
+    <script src="/QuocTien.ws/js/jquery-3.3.1.min.js?1752653256"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,8 +59,8 @@
 </div>
 
 
-<script type="text/javascript" src="/QuocTien.ws/js/lunr.min.js?1752652713"></script>
-<script type="text/javascript" src="/QuocTien.ws/js/auto-complete.js?1752652713"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/lunr.min.js?1752653256"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/auto-complete.js?1752653256"></script>
 
 <script type="text/javascript">
     
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/QuocTien.ws/js/search.js?1752652713"></script>
+<script type="text/javascript" src="/QuocTien.ws/js/search.js?1752653256"></script>
 
     
   </div>
@@ -1024,7 +1024,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#content">Content</a></li>
+        <li><a href="#-lab-content">📘 Lab Content</a></li>
       </ul>
     </li>
   </ul>
@@ -1053,22 +1053,41 @@
 
 
 
-	<p>In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.</p>
-<p>The architecture overview after you complete this step will be as follows:</p>
-<p><img src="/images/arc-01.png" alt="VPC"></p>
-<p>To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:</p>
+	<p>In this step, we will create a <strong>VPC</strong> with:</p>
+<ul>
+<li>1 <strong>public subnet</strong></li>
+<li>1 <strong>private subnet</strong></li>
+</ul>
+<p>Then, we&rsquo;ll launch:</p>
+<ul>
+<li>1 <strong>Linux EC2 instance</strong> in the public subnet</li>
+<li>1 <strong>Windows EC2 instance</strong> in the private subnet</li>
+</ul>
+<p>The architecture overview after completing this step is as follows:</p>
+
+
+
+  
+  
+    
+  
+
+<img src="images/arc-01.png" alt="Arc 01.png">
+
+<p>To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the following labs:</p>
 <ul>
 <li><a href="https://000004.awsstudygroup.com/en/">About Amazon EC2</a></li>
 <li><a href="https://000003.awsstudygroup.com/en/">Works with Amazon VPC</a></li>
 </ul>
-<h3 id="content">Content</h3>
+<hr>
+<h3 id="-lab-content">📘 Lab Content</h3>
 <ul>
 <li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.1-createvpc/">Create VPC</a></li>
 <li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">Create Public Subnet</a></li>
 <li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">Create Private Subnet</a></li>
-<li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">Create security group</a></li>
-<li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">Create public Linux server</a></li>
-<li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">Create private Windows server</a></li>
+<li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">Create Security Groups</a></li>
+<li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">Create Public Linux Server</a></li>
+<li><a href="/QuocTien.ws/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">Create Private Windows Server</a></li>
 </ul>
 
 
@@ -1563,19 +1582,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/QuocTien.ws/js/clipboard.min.js?1752652713"></script>
-    <script src="/QuocTien.ws/js/perfect-scrollbar.min.js?1752652713"></script>
-    <script src="/QuocTien.ws/js/perfect-scrollbar.jquery.min.js?1752652713"></script>
-    <script src="/QuocTien.ws/js/jquery.sticky.js?1752652713"></script>
-    <script src="/QuocTien.ws/js/featherlight.min.js?1752652713"></script>
-    <script src="/QuocTien.ws/js/highlight.pack.js?1752652713"></script>
+    <script src="/QuocTien.ws/js/clipboard.min.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/perfect-scrollbar.min.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/perfect-scrollbar.jquery.min.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/jquery.sticky.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/featherlight.min.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/highlight.pack.js?1752653256"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/QuocTien.ws/js/modernizr.custom-3.6.0.js?1752652713"></script>
-    <script src="/QuocTien.ws/js/learn.js?1752652713"></script>
-    <script src="/QuocTien.ws/js/hugo-learn.js?1752652713"></script>
+    <script src="/QuocTien.ws/js/modernizr.custom-3.6.0.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/learn.js?1752653256"></script>
+    <script src="/QuocTien.ws/js/hugo-learn.js?1752653256"></script>
 
-    <link href="/QuocTien.ws/mermaid/mermaid.css?1752652713" rel="stylesheet" />
-    <script src="/QuocTien.ws/mermaid/mermaid.js?1752652713"></script>
+    <link href="/QuocTien.ws/mermaid/mermaid.css?1752653256" rel="stylesheet" />
+    <script src="/QuocTien.ws/mermaid/mermaid.js?1752653256"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
